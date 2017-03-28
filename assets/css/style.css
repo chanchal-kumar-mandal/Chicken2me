@@ -1,0 +1,983 @@
+body {
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url('https://static.wixstatic.com/media/46c251_d625685669804524948dfeac0ef42c9d~mv2_d_5616_3744_s_4_2.jpg/v1/fill/w_1920,h_1280,al_c,q_85,usm_0.66_1.00_0.01/46c251_d625685669804524948dfeac0ef42c9d~mv2_d_5616_3744_s_4_2.webp');
+    background-size: cover;     
+    color: #000000;
+}
+a{
+    color: #000000;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.logout-container{
+    font-size: 14px;
+}
+.logout-container a, .logout-container a:hover{
+    text-decoration: none;
+}
+.error-message{
+    width:100%;
+    max-width:680px;
+    padding:5px 10px;
+    margin:10px auto;
+    font-size: 18px;
+    text-align:center;
+    color: #a94442;
+    background-color: #f2dede;
+    border:1px solid #ebccd1;
+}
+.success-message{
+    width:100%;
+    max-width:680px;
+    padding:5px 10px;
+    margin:10px auto;
+    font-size: 18px;
+    text-align:center;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border:1px solid #d6e9c6;
+}
+.page-container{
+    width: 100%;
+}
+
+/* Login Page Css */
+
+.page-title{ 
+    margin:50px auto; 
+    font-family: raleway,sans-serif;
+    font-weight: bold;  
+    font-size: 30px;
+    text-align: center;
+    line-height: normal;
+    letter-spacing: 2px;
+}
+.page-title a, .page-title a:hover{ 
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;  
+    font-size: 36px;
+    text-decoration: none;
+}
+.login-form-container {
+    width: 100%;
+    max-width: 740px;
+    margin:0 auto;     
+    padding:10px;
+}
+.login-form-content{
+    width:100%;
+    max-width: 500px;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.password-form-content{
+    width:100%;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: solid rgba(255, 255, 255, 1) 1px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6), inset 0 -1px 1px rgba(255, 255, 255, 0.6);
+}
+.login-form-title{
+    font: normal 22px/24px sans-serif;
+    margin-bottom: 30px;
+}
+.password-form-content .login-form-title, .login-form-text{
+    color: #989898;    
+}
+.login-form-text{
+    font: normal 18px/22px sans-serif;
+    margin-bottom: 30px;
+}
+.login-form input[type=text], .login-form input[type=password] {
+    height: 42px;
+    max-width: 99%;
+    margin:0 auto;
+    padding: 0;
+}
+.login-form ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    font: normal 28px/42px sans-serif;
+    transition: color 0.4s ease 0s;
+    color: #2F2E2E;
+    text-align: center;
+}
+.login-form ::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font: normal 28px/42px sans-serif;
+    transition: color 0.4s ease 0s;
+    color: #2F2E2E;
+    text-align: center;
+}
+.login-form ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font: normal 28px/42px sans-serif;
+    transition: color 0.4s ease 0s;
+    color: #2F2E2E;
+    text-align: center;
+}
+.login-form ::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font: normal 28px/42px sans-serif;
+    transition: color 0.4s ease 0s;
+    color: #2F2E2E;
+    text-align: center;
+}
+.login-form .form-control, .shop-form .form-control{
+    height: 42px;
+    text-align: center;
+    font: normal 26px/42px sans-serif;
+    color:#2F2E2E;
+    border-radius: 5px;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 1) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    border: solid rgba(160, 160, 159, 1) 0px;
+}
+.form-control:hover, .login-form input[type=text]:hover, .login-form input[type=password]:hover, .login-form input[type=submit]:hover, .shop-form label:hover,.shop-form .form-control:hover, .shop-link-btn:hover, .btn-shop-submit:hover,.btn-shop-cancel:hover, .btn-forgot-submit:hover{     
+    background: rgb(210, 210, 210) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    color: #FFF;
+}
+.login-form input[type=checkbox] {
+    transform: scale(3);
+    margin-top: 6px;
+    margin-left: -7px;
+}
+.remember-me{
+    font: normal 17px/24px sans-serif;
+    margin-left: 27px;
+    color: #605E5E;
+}
+.login-form .checkbox{
+    margin: 30px 0;
+}
+.login-form input[type=submit] {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 26px;
+    color:#FFF;
+}
+.loginmodal-submit {
+    border: 0px;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    font-size: 14px;
+    border-radius: 5px;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: rgba(222, 80, 33, 1) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    border: solid rgba(160, 160, 159, 1) 0px;
+}
+.form-bottom-text-content{
+    display: block;
+    margin: 20px auto;
+    overflow: hidden;
+    font-size: 18px; 
+}
+.form-bottom-text-content a{
+    display: block;
+    font-size: 18px; 
+    color: #605E5E;
+}
+.page-middle-border{
+    display:block;
+    overflow: hidden;
+    width: 100%;
+    max-width: 880px;
+    margin:0 auto 50px;
+    height:1px;
+    background-color: #a0a09f;
+}
+.page-title-orange{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;  
+    font-size: 36px;
+    color: #CC5037;
+}
+.page-text{
+    width: 100%;
+    max-width: 880px;
+    margin:50px auto;
+    padding:10px;
+    font: normal 22px/28px sans-serif;
+    color: #605E5E;
+    word-wrap: break-word;
+}
+.page-text a{
+    font-size: 22px;
+    font-weight: bold;
+} 
+.social-icons-container{
+    margin-bottom: 80px;
+}
+.social-icons{
+    text-align: center;
+}
+.social-icons a{
+    height: 25px;
+    width: 25px;
+    margin:2px;
+}
+
+/* Signup Page CSS */
+
+.register-form-container{
+    width:100%;
+    max-width:800px;
+    margin: 50px auto;
+}
+.register-form{
+    display: block;
+    overflow: hidden;
+}
+.register-form-text{
+    display: block;
+    overflow: hidden;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    font: normal 17px/22px sans-serif;
+    color: #605E5E;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: solid rgba(255, 255, 255, 1) 1px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6), inset 0 -1px 1px rgba(255, 255, 255, 0.6);
+}
+.register-form .form-control, .register-form .form-control:hover{
+    height: 42px;
+    font: normal 22px/42px sans-serif;
+    color:#2F2E2E;
+    border-radius: 0;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    background: rgba(255, 255, 255, 1) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    border: 1px solid rgba(160, 160, 159, 1);
+}
+.register-form textarea.form-control, .register-form textarea.form-control:hover{
+    height:auto;
+    min-height:130px;
+}
+.register-form label{
+    height: 42px;
+    font: normal 22px/42px sans-serif;
+    color: #6d6464;
+    border-radius: 5px;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 1) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    border: solid rgba(160, 160, 159, 1) 0px;
+}
+.register-form-radio-container{
+    font: normal 22px/42px sans-serif;
+    color:#2F2E2E;
+}
+.register-form input[type=radio] {
+    transform: scale(3);
+    margin-top: 6px;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+.btn-register-submit{
+    width: 80px;
+    height: 42px;
+    margin: 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+    font: normal 20px/42px sans-serif;
+    border: 0;
+    color: #8B0000;
+    cursor: pointer;
+}
+
+/* Subscriptions Page CSS */
+
+.signup-page-top-text{
+    width: 100%;
+    max-width: 1000px;
+    margin:0 auto 30px;
+    font-size: 20px;
+    color: #605E5E;
+    word-wrap: break-word;
+}
+.signup-top-title{
+    display: block;
+    overflow: hidden;
+    margin: 0 auto 30px;
+    font-size: 33px;
+    color: #000;
+}
+.signup-links-container{    
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+.signup-link-content{
+    display: block;
+    overflow: hidden;
+    width: 33.33%;
+    float: left;
+    color:#FFF;
+}
+.signup-link-top-left, .signup-link-top-center, .signup-link-top-right{
+    display:block;
+    overflow: hidden;
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border: 0px solid transparent;
+    font: normal 40px/50px sans-serif;
+    text-align: center;
+}
+.signup-link-top-left{
+    background-color: rgba(204, 80, 55, 1);
+    box-shadow: -0.77px 0.64px 4px 0px rgba(0, 0, 0, 0.6);    
+    background-image: url(../images/apple_box.png);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+}
+.signup-link-top-center{
+    background-color: rgba(184, 57, 31, 1);
+    box-shadow: -0.77px 0.64px 4px 0px rgba(0, 0, 0, 0.6);    
+    background-image: url(../images/apple_box.png);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+}
+.signup-link-top-right{
+    background-color: rgba(139, 0, 0, 1);
+    box-shadow: -0.77px 0.64px 4px 0px rgba(0, 0, 0, 0.6);    
+    background-image: url(../images/apple_box.png);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+}
+.signup-link-bottom{
+    display: block;
+    overflow: hidden;    
+    padding: 20px;
+    font: normal 17px/22px sans-serif;
+    background-color: rgba(139, 0, 0, 0.63);
+    background-size: 100% 100%; 
+    height: 400px;
+}
+.signup-link-bottom a{
+    color:#FFF;
+}
+.signup-link-bottom-middle{
+    border-left: 1px solid rgba(160, 160, 159, 1);
+    border-right: 1px solid rgba(160, 160, 159, 1);
+}
+.box h3{
+    text-align:center;
+    margin:0;
+}
+.box {
+    width:100%;
+    height:42px;
+    background:#FFF;
+    margin:10px auto;
+}
+.effect1
+{
+    position: relative;
+}
+.effect1:before, .effect1:after
+{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 94%;
+    top: 20%;
+    max-width: 300px;
+    background: #000;
+    box-shadow: 0 15px 10px #000;
+    transform: rotate(-3deg);
+}
+.effect1:after
+{
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+.box h3 a {
+    display: block;
+    width: 100%;
+    font: normal 28px/42px sans-serif;
+    color: #2F2E2E;
+    text-decoration: none;
+}
+.box h3 a:hover {     
+    background: rgb(210, 210, 210) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    color: #FFF;
+    text-decoration: none;
+}
+.signup-bottom{
+    display: block;
+    overflow: hidden;
+    width: 100%;        
+    padding: 20px;   
+    background-color: rgba(139, 0, 0, 0.63);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font: normal 22px sans-serif;
+    color:#FFF;
+}
+.signup-bottom span{
+    display: block;
+    margin-top:40px;
+}
+
+/* Subscriptions Page CSS */
+
+.subscriptions-page-top-text{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 50px; 
+    font: normal 22px sans-serif;
+}
+.subs-form-title{
+    height: auto;
+    min-height: 90px;
+    padding: 10px 0;
+    vertical-align: middle;
+    border-bottom: 1px solid #a0a09f;
+    font: normal 21px/26px sans-serif;
+}
+.subs-form-label{
+    height: 42px;
+    margin: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    font: normal 28px/42px sans-serif;
+    color: #2F2E2E;
+    border-radius: 5px;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 1) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    border: solid rgba(160, 160, 159, 1) 1px;
+}
+.subs-form-label:hover {
+    background-color: rgba(160, 160, 159, 1);
+    color: #FFF;
+}
+.subs-form-radio-label{
+    width: 148px;
+    display: inline-block;
+    height:42px;
+    margin: 20px 0;
+    padding: 0 2px;
+    font: normal 21px/42px sans-serif;
+    text-align: center;
+    color: #2F2E2E;
+    border-radius: 5px;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 1) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    border: solid rgba(160, 160, 159, 1) 1px;
+}
+.div-one-third{
+    width: 33.33%;
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+.subs-form input[type=radio] {
+    transform: scale(3);
+    margin-top: 6px;
+    margin-left: 14px;
+}
+
+/* Shop Page and Opening Times Pages Css */
+
+.shop-form-container,.opening-times-form-container{
+    display: block;
+    overflow: hidden;
+    width:100%;
+    max-width:1200px;
+    margin:0 auto 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: solid rgba(255, 255, 255, 1) 1px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6), inset 0 -1px 1px rgba(255, 255, 255, 0.75);
+}
+.shoping-page-top-text{
+    font: normal 40px/42px sans-serif;
+    color: #605E5E;
+    margin-bottom: 20px;
+}
+.shoping-page-top-text span{
+    font: normal 22px/42px sans-serif;
+}
+select{
+    text-align-last:center;
+}
+.shop-form-title{
+    margin:0 auto 30px;
+    font: normal 22px/42px sans-serif;
+    color: #605E5E;
+}
+.shop-form-container .form-group, .opening-times-form-container .form-group {
+    margin-bottom: 10px;
+    display: block;
+    overflow: hidden;
+}
+.shop-form-container label, .opening-times-form-container label {
+    height: 42px;
+    color:#FFF;
+    text-align: center;
+    border-radius: 5px;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 1) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    border: solid rgba(160, 160, 159, 1) 0px;
+}
+.shop-form-container label, .opening-times-form-container label {
+    font: normal 28px/42px sans-serif;
+}
+.opening-times-form-container label {
+    font: normal 24px/42px sans-serif;
+}
+.shop-form ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    transition: color 0.4s ease 0s;
+    color: #2F2E2E;
+}
+.shop-form ::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    transition: color 0.4s ease 0s;
+    color: #2F2E2E;
+}
+.shop-form ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    transition: color 0.4s ease 0s;
+    color: #2F2E2E;
+}
+.shop-form ::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    transition: color 0.4s ease 0s;
+    color: #2F2E2E;
+}
+.form-group a.shop-link-btn:hover{
+    text-decoration: none;
+}
+.shop-link-btn{
+    display: block;
+    overflow: hidden;
+    height: 42px;
+    margin-right: 15px;
+    font: normal 19px/42px sans-serif;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    color: #FFF;
+    border-radius: 5px;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: rgba(222, 80, 33, 1) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    border: solid rgba(160, 160, 159, 1) 0px;
+}
+a.shop-link-btn: hover{
+    text-decoration: none;
+}
+.shop-form-action-container{
+    margin-top:15px;
+}
+.shop-anchor{
+    font-size:15px;
+    margin-top: 8px;
+    display: block;
+}
+.btn-shop-submit{
+    width:168px;
+    height: 42px;
+    padding: 0 50px;
+    margin: 5px;
+    font: normal 22px/42px sans-serif;
+    color: #FFF;
+    border-radius: 5px;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: rgba(186, 218, 85, 1) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    border: solid rgba(160, 160, 159, 1) 0px;
+}
+.btn-forgot-submit{
+    width:140px;
+    height: 42px;
+    padding: 0 50px;
+    margin: 5px;
+    text-align: center;
+    font: normal 18px/42px sans-serif;
+    color: #000;
+    border-radius: 5px;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #FFF;
+    border: solid rgba(160, 160, 159, 1) 0px;
+}
+.btn-shop-cancel{
+    width:168px;
+    height: 42px;
+    padding: 0 50px;
+    margin: 5px;
+    text-decoration: none;
+    font: normal 22px/42px sans-serif;
+    color: #FFF;
+    border-radius: 5px;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: rgba(222, 80, 33, 1) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    border: solid rgba(160, 160, 159, 1) 0px;
+}
+
+/* Landing Page CSS */
+
+.landing-page-top-text{ 
+    display: block;
+    overflow: hidden;  
+    margin: 0 auto;
+    font: normal 22px/42px sans-serif;
+    letter-spacing: 2px;
+}
+.landing-menu-container{
+    width: 100%;
+    max-width: 560px;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.landing-menu-container a.landing-menu{
+    display: block;
+    width: 100%;
+    height: 42px;
+    margin: 40px 0;
+    text-align: center;
+    text-decoration: none;
+    font: normal 28px/42px sans-serif;
+    color:#2F2E2E;
+    border-radius: 5px;
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: rgba(255, 255, 255, 1) url(https://static.parastorage.com/services/skins/2.1229.63/images/wysiwyg/core/themes/base/shiny2button_bg.png) center top repeat-x;
+    border: solid rgba(160, 160, 159, 1) 1px;
+}
+.landing-menu-container a.landing-menu:hover {
+    background-color: rgba(160, 160, 159, 1); 
+    color: #FFF;
+}
+.landing-page-bottom-title{
+    font: normal 22px/42px sans-serif;
+    color: #2F2E2E;
+    margin:0 auto 30px;
+}
+.landing-page-bottom-title a{
+    font: normal 22px/42px sans-serif;
+    color: #2F2E2E;
+}
+
+/* Terms Conditions Legal Page CSS */
+.terms-conditions-legal-container{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    font: normal 17px/22px sans-serif;
+    color: #FFF;
+    background-color: rgba(139, 0, 0, 0.63);    
+}
+.terms-conditions-legal-container a{
+   color: #FFF; 
+}
+
+/* Responsive CSS */
+
+@media only screen and (max-width: 1160px) {
+    .subs-form-label{
+        font: normal 20px/42px sans-serif;
+    }
+    .subs-form-radio-label{
+        width: 128px;
+        font: normal 18px/42px sans-serif;
+    }
+    .subs-form input[type=radio] {
+        transform: scale(2);
+        margin-top: 6px;
+        margin-left: 10px;
+    }
+    .signup-links-container .box h3 a {
+        font: normal 24px/42px sans-serif;
+    }
+    .signup-link-bottom{
+        height: 480px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .signup-links-container .box {    
+        margin: 20px auto;
+    }
+    .signup-links-container .box h3 a {
+        font: normal 22px/42px sans-serif;
+    }
+    .signup-link-bottom{
+        font: normal 15px sans-serif;
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width: 768px) {    
+    .signup-link-content{
+        width: 100%;
+    }    
+    .signup-link-bottom-middle{
+        border:none;
+    }
+    .signup-link-bottom{
+        font: normal 16px/18px sans-serif;
+        height: 330px;
+    }    
+    .subs-form-label{
+        height: 42px;
+        font: normal 18px/42px sans-serif;
+    }
+    .subs-form-radio-label{
+        height:42px;
+        font: normal 18px/42px sans-serif;
+    }
+    .div-one-third{
+        width: 100%;
+    }
+    .shop-link-btn {
+        height: auto;
+        padding: 5px;
+        text-align: center;
+        font: normal 18px/20px sans-serif;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    a {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .page-title {
+        margin: 10px auto;
+        font-size: 20px;
+    }
+    .page-title a{
+        font-size: 22px;
+    } 
+    .login-form-title {
+        font: normal 18px/22px sans-serif;
+        margin-bottom: 15px;
+    }  
+    .login-form-text {
+        font: normal 16px/20px sans-serif;
+        margin-bottom: 15px;
+    }    
+    .login-form .form-control, .shop-form .form-control {
+        height: 30px;
+        font: normal 16px/30px sans-serif;
+    } 
+    .login-form ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        font: normal 16px/30px sans-serif;
+    }
+    .login-form ::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        font: normal 16px/30px sans-serif;
+    }
+    .login-form ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        font: normal 16px/30px sans-serif;
+    }
+    .login-form ::-ms-input-placeholder { /* Internet Explorer 10-11 */
+       font: normal 16px/30px sans-serif;
+    }
+    .login-form input[type=text], .login-form input[type=password] {
+        height: 30px;
+    }
+    .login-form .form-control, .login-form .form-control:hover {
+        /*font: normal 20px/42px sans-serif;*/
+        font-size: 20px;
+        line-height: 42px;
+        font-family: sans-serif;
+    }
+    .login-form input[type="checkbox"] {
+        transform: scale(2);
+        margin-top: 3px;
+        margin-left: -12px;
+    }
+    .remember-me {
+        font: normal 14px/20px sans-serif;
+        margin-left: 15px;
+    }
+    .login-form input[type=submit] {
+        font-size: 18px;
+    }
+    .form-bottom-text-content {        
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    .form-bottom-text-content a {
+        font-size: 14px;
+        margin: 15px 0 0;
+    }
+    .page-middle-border{
+        margin:0 auto 20px;
+    }
+    .page-title-orange{
+        font-size: 20px;
+    }
+    .page-text{
+        margin:0 auto 10px;
+        font: normal 16px/18px sans-serif;
+    } 
+    .page-text a {
+        font-size: 18px;
+    }          
+    .social-icons a {
+        margin: 10px 2px;
+        display: inline-block;
+    }
+
+    .register-form-container{
+        margin: 20px auto;
+    }
+    .register-form-text{
+        padding: 10px;
+        border-radius: 5px;
+        font: normal 14px/18px sans-serif;
+    }
+    .register-form .form-control, .register-form .form-control:hover{
+        height: 30px;
+        font: normal 18px/30px sans-serif;
+    }
+    .register-form textarea.form-control, .register-form textarea.form-control:hover{
+        height:auto;
+        min-height:80px;
+    }
+    .register-form label{
+        height: 30px;
+        font: normal 18px/30px sans-serif;
+    }
+    .register-form-radio-container{
+        font: normal 18px/30px sans-serif;
+        color:#2F2E2E;
+    }
+    .register-form input[type=radio] {
+        transform: scale(2);
+        margin-top: 6px;
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+    .btn-register-submit{
+        height: 30px;
+        font: normal 18px/30px sans-serif;
+    }
+
+    .signup-page-top-text {
+        font-size: 16px;
+    }
+    .signup-top-title {
+        font-size: 18px;
+        margin: 0 auto 10px;
+    }
+    .signup-link-top-left, .signup-link-top-center, .signup-link-top-right
+    {
+        font: normal 24px/28px sans-serif;
+    }
+    .signup-link-bottom {
+        font: normal 14px/16px sans-serif;
+        height: 330px;
+    }
+    .signup-bottom {
+        padding: 20px;
+        font: normal 16px sans-serif;
+    }
+    .signup-links-container .box {
+        height:30px;
+    }
+    .signup-links-container .box h3 a {
+        font: normal 18px/30px sans-serif;
+    }
+    .landing-page-top-text{ 
+        font: normal 16px/42px sans-serif;
+        letter-spacing: normal;
+    }
+    .landing-menu-container a.landing-menu{
+        height: 30px;
+        margin: 10px 0;
+        font: normal 16px/30px sans-serif;
+    }
+
+    .subscriptions-page-top-text{
+        margin: 0 auto 20px; 
+        font: normal 18px sans-serif;
+    }
+    .subs-form-title{
+        min-height: 40px;
+        font: normal 15px/18px sans-serif;
+    }
+    .subs-form-label{
+        height: 30px;
+        font: normal 16px/30px sans-serif;
+    }
+    .subs-form-radio-label{
+        margin: 10px 0;
+        height:30px;
+        font: normal 16px/30px sans-serif;
+    }
+    .div-one-third{
+        width: 100%;
+    }
+    .shoping-page-top-text {
+        font: normal 20px/24px sans-serif;
+    } 
+    .shoping-page-top-text span {
+        font: normal 16px/42px sans-serif;
+    }  
+    .shop-form-title {
+        font: normal 14px/18px sans-serif;
+        margin-top: 10px;
+    }
+    .shop-form-container label, .opening-times-form-container label {
+        height: 30px;
+        font: normal 18px/30px sans-serif;
+    }
+    .shop-link-btn {
+        width: 100%;
+        padding: 5px;
+        height: auto;
+        font: normal 16px/15px sans-serif;
+        color: rgb(251, 251, 251);
+        text-align: center;
+    }
+    .btn-shop-submit, .btn-shop-cancel{
+        width: 100px;
+        height: 30px;
+        padding: 0 20px;
+        font: normal 18px/30px sans-serif;
+        text-align: center;
+    } 
+    .landing-page-bottom-title {
+        font: normal 14px/16px sans-serif;
+        margin: 5px auto 10px;
+    }
+    .landing-page-bottom-title a {
+        font: normal 16px/22px sans-serif;
+    }
+    .terms-conditions-legal-container{
+        margin: 20px auto;
+        padding: 10px;
+        font: normal 14px/18px sans-serif;   
+    }    
+    .btn-forgot-submit{
+        width:120px;
+        height: 30px;
+        text-align: center;
+        padding: 0 30px;
+        font: normal 15px/30px sans-serif;
+    }
+
+}
